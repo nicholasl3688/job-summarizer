@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Job Summary</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">Reading page…</h1>
+    <p id="sub"></p>
+  </header>
+
+  <p id="notice" hidden></p>
+
+  <div id="card" hidden>
+    <p id="summary"></p>
+    <div id="pay" class="pay" hidden>
+      <div id="pay-main"></div>
+      <div id="pay-sub"></div>
+    </div>
+    <div id="tags" class="tags"></div>
+    <div id="meta"></div>
+    <h2 id="req-h" hidden>Requirements</h2>
+    <ul id="reqs"></ul>
+  </div>
+
+  <footer>
+    <button id="copy" disabled>Copy</button>
+    <button id="gear" class="ghost" title="API key settings">⚙ AI key</button>
+  </footer>
+
+  <section id="settings" hidden>
+    <label for="key">Gemini or Anthropic API key (for the one-sentence summary). Stored only in this browser.</label>
+    <input id="key" type="password" placeholder="Paste key" autocomplete="off">
+    <button id="save">Save</button>
+    <span id="save-msg"></span>
+  </section>
+
+  <script src="parse.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

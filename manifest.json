@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Job Listing Summarizer",
+  "version": "0.1.0",
+  "description": "Click on any job listing to get pay, job type, requirements, and deadline at a glance.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://api.anthropic.com/*", "https://generativelanguage.googleapis.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Summarize this job"
+  }
+}

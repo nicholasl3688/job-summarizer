@@ -1,0 +1,73 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1c1c1e;
+  --muted: #6b6b73;
+  --line: #e4e4e8;
+  --accent: #2f5bea;
+  --chip: #eef1fd;
+  --warn: #fff4d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1f;
+    --fg: #ececf0;
+    --muted: #9a9aa5;
+    --line: #333339;
+    --accent: #7c9bff;
+    --chip: #272a3a;
+    --warn: #3d3315;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  width: 400px;
+  min-height: 120px;
+  margin: 0;
+  padding: 14px 16px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+header { margin-bottom: 10px; }
+h1 { margin: 0; font-size: 16px; line-height: 1.3; }
+h2 { margin: 0 0 4px; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+#sub { margin: 2px 0 0; color: var(--muted); }
+
+#notice { margin: 0 0 10px; padding: 6px 10px; border-radius: 6px; background: var(--warn); }
+
+#summary { margin: 0 0 10px; font-size: 14px; }
+#summary:empty { display: none; }
+
+.pay { margin-bottom: 8px; }
+#pay-main { font-size: 18px; font-weight: 650; }
+#pay-sub { color: var(--muted); font-size: 12px; }
+
+.tags { margin-bottom: 6px; }
+.tags:empty { display: none; }
+.chip { display: inline-block; margin: 0 4px 4px 0; padding: 1px 8px; border-radius: 999px; background: var(--chip); }
+
+.row { display: grid; grid-template-columns: 62px 1fr; gap: 8px; padding: 5px 0; border-top: 1px solid var(--line); }
+.row .k { color: var(--muted); }
+
+#req-h { margin-top: 10px; }
+ul { margin: 0; padding-left: 16px; }
+li + li { margin-top: 3px; }
+
+footer { display: flex; gap: 6px; margin-top: 12px; }
+button {
+  padding: 6px 10px; border: 1px solid var(--accent); border-radius: 6px;
+  background: var(--accent); color: #fff; font: inherit; cursor: pointer;
+}
+button.ghost, #copy { background: transparent; color: var(--accent); }
+button:disabled { opacity: .45; cursor: default; }
+#gear { margin-left: auto; }
+
+#settings { margin-top: 10px; display: grid; gap: 6px; }
+#settings label { color: var(--muted); font-size: 12px; }
+#settings input {
+  padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--bg); color: var(--fg); font: inherit;
+}
+#save-msg { color: var(--muted); font-size: 12px; }
